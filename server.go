@@ -12,11 +12,11 @@ type Server struct {
 
 /*
 *
-*	функция Run         - запуск сервера
-*	input (port string) - порт сервера
-*
+*	функция Run - запуск сервера
+*	(port string) - порт сервера
+*	(handler http.Handler) - обработчик запросов
+*	возвращает error
  */
-
 func (s *Server) Run(port string, handler http.Handler) error {
 	s.httpServer = &http.Server{
 		Addr:           ":" + port,
@@ -30,11 +30,12 @@ func (s *Server) Run(port string, handler http.Handler) error {
 }
 
 /*
-*	функция Stop - остановка работы сервера
 *
+*	функция Stop - остановка работы сервера
+*	(ctx context.Context) - контекст
+*	вощвращает error
 *
  */
-
 func (s *Server) Shutdown(ctx context.Context) error {
 	return s.httpServer.Shutdown(ctx)
 }

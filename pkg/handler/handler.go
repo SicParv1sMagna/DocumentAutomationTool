@@ -5,14 +5,32 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+/*
+*
+*	структура Handler - обработчик запрсоов
+*
+ */
 type Handler struct {
 	services *service.Service
 }
 
+/*
+*
+*	функция NewHandler - конструктор обработчиков запросов
+*	(services *service.Service) - бизнес-логика
+*	возвращает *Handler
+*
+ */
 func NewHandler(services *service.Service) *Handler {
 	return &Handler{services: services}
 }
 
+/*
+*
+*	функция InitRoutes - инциализация роутов
+*	возвращает *gin.Engine
+*
+ */
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 
