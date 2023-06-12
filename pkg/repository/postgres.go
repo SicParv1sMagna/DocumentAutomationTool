@@ -7,10 +7,12 @@ import (
 	_ "github.com/lib/pq"
 )
 
+const (
+	usersTable = "users"
+)
+
 /*
-*
 *	структура Config - конфигурация базы данных
-*
  */
 type Config struct {
 	Host     string
@@ -22,11 +24,9 @@ type Config struct {
 }
 
 /*
-*
 *	функция NewPostgresDB - инициализация модели базы данных
 *	(cfg Config) - конфигурация базы данных
 *	возвращает (*sqlx.DB, error)
-*
  */
 func NewPostgresDB(cfg Config) (*sqlx.DB, error) {
 	db, err := sqlx.Open("postgres", fmt.Sprintf("host=%s port=%s user=%s dbname=%s password=%s sslmode=%s",

@@ -1,14 +1,12 @@
 package autotool
 
 /*
-*
 *	структура User - модель пользователя
-*
  */
 type User struct {
-	Id         int    `json:"-"`
-	Name       string `json:"name"`
-	Email      string `json:"email"`
-	Password   string `json:"password"`
-	Subscribed bool   `json:"subscribed"`
+	Id       int    `json:"-" db:"id"`
+	Name     string `json:"name" binding:"required"`
+	Email    string `json:"email" binding:"required"`
+	Password string `json:"password" binding:"required"`
+	// Subscribed bool   `json:"subscribed" binding:"required"`
 }

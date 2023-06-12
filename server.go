@@ -11,7 +11,6 @@ type Server struct {
 }
 
 /*
-*
 *	функция Run - запуск сервера
 *	(port string) - порт сервера
 *	(handler http.Handler) - обработчик запросов
@@ -30,11 +29,9 @@ func (s *Server) Run(port string, handler http.Handler) error {
 }
 
 /*
-*
 *	функция Stop - остановка работы сервера
 *	(ctx context.Context) - контекст
 *	вощвращает error
-*
  */
 func (s *Server) Shutdown(ctx context.Context) error {
 	return s.httpServer.Shutdown(ctx)

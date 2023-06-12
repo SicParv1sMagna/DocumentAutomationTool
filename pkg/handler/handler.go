@@ -6,30 +6,24 @@ import (
 )
 
 /*
-*
 *	структура Handler - обработчик запрсоов
-*
  */
 type Handler struct {
 	services *service.Service
 }
 
 /*
-*
 *	функция NewHandler - конструктор обработчиков запросов
 *	(services *service.Service) - бизнес-логика
 *	возвращает *Handler
-*
  */
 func NewHandler(services *service.Service) *Handler {
 	return &Handler{services: services}
 }
 
 /*
-*
 *	функция InitRoutes - инциализация роутов
 *	возвращает *gin.Engine
-*
  */
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
@@ -40,7 +34,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		auth.POST("/sign-in", h.signIn)
 	}
 
-	api := router.Group("/api")
+	api := router.Group("/api", h.userIndentity)
 	{
 		docs := api.Group("/docs")
 		{
