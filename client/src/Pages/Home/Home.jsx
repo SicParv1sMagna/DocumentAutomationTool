@@ -1,8 +1,7 @@
-export const Document = () => {
+export const Home = () => {
     return (
         <div>
 
         </div>
     )
 }
-

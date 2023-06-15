@@ -1,6 +1,6 @@
 import { useState } from "react"
 import RegisterUser from "../../Api/registerUser"
-import ValidateRegistrationForm from "../../Validators/registrationFormValidation";
+import ValidateRegistrationForm from "../../Helpers/Validators/registrationFormValidation";
 
 export const RegistrationForm = () => {
     const [error, setError] = useState("");

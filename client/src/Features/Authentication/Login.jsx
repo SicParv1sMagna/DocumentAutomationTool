@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import LoginUser from "../../Api/loginUser";
-import ValidateLoginForm from "../../Validators/loginFormValidation";
+import ValidateLoginForm from "../../Helpers/Validators/loginFormValidation";
 
 
 export const LoginForm = () => {
