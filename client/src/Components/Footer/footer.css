@@ -1,0 +1,48 @@
+.footer {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    box-shadow: 0 0 10px rgba(0, 73, 125, 0.25);
+    position: sticky;
+    bottom: 0;
+    height: 8vh;
+    padding: 0 2%;
+    align-items: center;
+}
+
+.right_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right_footer h1 {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    margin-right: 5%;
+}
+
+.right_footer p {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.Subscribe button {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 0 5%;
+    transition: 0.3s;
+}
+
+.Subscribe button:hover {
+    background-color: var(--light-color);
+}
+
+.Subscribe h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}

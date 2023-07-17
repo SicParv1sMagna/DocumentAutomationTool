@@ -1,0 +1,81 @@
+.navbar {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: #1C73B1;
+    height: 12vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    width: 12%;
+    transition: .3s;
+}
+
+.title a {
+    font-family: 'Rozha One', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 400%;
+}
+
+.title:hover {
+    scale: 1.05;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+}
+
+.item {
+    width: 25%;
+    margin: 0 2%;
+    color: azure;
+}
+
+.default {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 100%;
+    transition: .3s;
+}
+
+.default:hover {
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 0 5px;
+}
+
+.LogOut {
+    width: 10%;
+    margin: 0 2%;
+}
+
+.LogOut button {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #8DB9D8;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 120%;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 1px 3px 7px 0 #00497D;
+    transition: .5s;
+}
+
+.LogOut button:hover {
+    background-color: white;
+    color: #8DB9D8;
+}
+
+.actives {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 600;
+}

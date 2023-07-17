@@ -1,0 +1,10 @@
+.document{
+    height: 80vh;
+}
+
+.document h1 {
+    margin: 0;
+    padding-top: 7%;
+    font-weight: 600;
+}
+
